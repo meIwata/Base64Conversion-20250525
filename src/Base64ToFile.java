@@ -13,7 +13,8 @@ public class Base64ToFile {
     }
 
     public static void main(String[] args) throws Exception {
-        String base64String = new String(Files.readAllBytes(Paths.get("src/Documents/base64.txt")), StandardCharsets.UTF_8);
+        String base64String = new String(Files.readAllBytes(Paths.get("src/Documents/base64.txt")),
+                StandardCharsets.UTF_8);
         // 清除所有換行、空白
         base64String = base64String.replaceAll("\\s", "");
         // 若有 data: 前綴，要去掉
